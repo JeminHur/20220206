@@ -6,20 +6,16 @@
 class Player:public Actor
 {
 public:
-
 	Player();
 	Player(int startX, int startY);
 	virtual ~Player();
 
 	void moveXRight();
-
 	void moveXRLeft();
-
 	void moveYUp();
-
 	void moveYDown();
 
-	char getShape();
+	virtual char getShape() override;
 
 };
 

@@ -7,14 +7,11 @@
 class Goal :public Actor
 {
 public:
-
 	Goal();
-
 	Goal(int startX, int startY);
-
 	virtual ~Goal();
 	
-	char getShape();
+	virtual char getShape() override;
 
 };
 

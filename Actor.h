@@ -2,13 +2,11 @@
 #ifndef __ACTOR_H__
 #define __ACTOR_H__
 
-
 class Actor
 {	
 protected:
 	int x=0;
 	int y=0;
-	int Count = 10;
 
 public:
 	Actor();
@@ -20,9 +18,6 @@ public:
 
 	int getX();
 	int getY();
-
-	void SetCount(int CountChange);
-	int GetCount();
 
 	virtual char getShape() = 0;
 	

@@ -6,14 +6,11 @@
 class Wall :public Actor
 {
 public:
-
 	Wall();
-
 	Wall(int startX, int startY);
-
 	virtual ~Wall(){}
 	
-	char getShape();
+	virtual char getShape() override;
 
 };
 

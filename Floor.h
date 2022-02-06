@@ -7,14 +7,11 @@
 class Floor : public Actor
 {
 public:
-
 	Floor();
-
 	Floor(int startX, int startY);
-
 	virtual ~Floor();
 	
-	char getShape();
+	virtual char getShape() override;
 
 };
 

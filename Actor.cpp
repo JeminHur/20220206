@@ -34,13 +34,3 @@ int Actor::getY()
 	return y;
 }
 
-void Actor::SetCount(int CountChange)
-{
-	Count = CountChange;
-}
-
-int Actor::GetCount() 
-{
-	return Count;
-}
-
