@@ -19,6 +19,7 @@ protected:
 	char Key=' ';
 	Player* player = new Player(1,1);
 	Actor* goal = new Goal(8,8);
+	Map* maps = new Map(20, 10);
 
 public:
 	bool bIsRunning = true;

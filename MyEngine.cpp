@@ -15,22 +15,50 @@ void MyEngine::Tick()
 
 	else if (Key == 'A' || Key == 'a')
 	{
-		player->moveXRLeft();
+		if (player->getX() == 1)
+		{
+			player->setX(1);
+		}
+		else
+		{
+			player->moveXRLeft();
+		}
 	}
 
 	else if (Key == 'D' || Key == 'd')
 	{
-		player->moveXRight();
+		if (player->getX() == maps->getRow() - 2)
+		{
+			player->setX(maps->getRow() - 2);
+		}
+		else
+		{
+			player->moveXRight();
+		}
 	}
 
 	else if (Key == 'W' || Key == 'w')
 	{
-		player->moveYUp();
+		if (player->getY() == 1)
+		{
+			player->setY(1);
+		}
+		else
+		{
+			player->moveYUp();
+		}	
 	}
 
 	else if (Key == 'S' || Key == 's')
 	{
-		player->moveYDown();
+		if (player->getY() == maps->getColumn()-2)
+		{
+			player->setY(maps->getColumn() - 2);
+		}
+		else
+		{
+			player->moveYDown();
+		}
 	}
 }
 
@@ -38,10 +66,10 @@ void MyEngine::Rander()
 {
 	system("cls");
 
-	Map maps;
-	maps.drowmap();
-	
+	Map* maps = new Map(20, 10);
 
+	maps->drowmap();
+	
 	gotoxy(goal->getX(), goal->getY());
 	cout << goal->getShape();
 

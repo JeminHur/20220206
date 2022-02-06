@@ -2,6 +2,7 @@
 #ifndef __PLAYER_H__
 #define __PLAYER_H__
 #include "Actor.h"
+#include"Map.h"
 
 class Player:public Actor
 {
