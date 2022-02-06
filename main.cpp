@@ -7,12 +7,7 @@ int main()
 {
 	MyEngine* myengine = new MyEngine;
 
-	while (myengine->bIsRunning)
-	{
-		myengine->Input();
-		myengine->Tick();
-		myengine->Rander();
-	}
-
+	myengine->Run();
+	
 	return 0;
 }

@@ -16,10 +16,11 @@ using namespace std;
 class MyEngine
 {
 protected:
+
 	char Key=' ';
 	Player* player = new Player(1,1);
 	Actor* goal = new Goal(8,8);
-	Map* maps = new Map(20, 10);
+	Map* maps = new Map(20, 20);
 
 public:
 	bool bIsRunning = true;
@@ -27,6 +28,7 @@ public:
 	int Input();
 	void Tick();
 	void Rander();
+	void Run();
 
 	void gotoxy(int x, int y);
 

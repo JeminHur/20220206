@@ -66,9 +66,8 @@ void MyEngine::Rander()
 {
 	system("cls");
 
-	Map* maps = new Map(20, 10);
-
-	maps->drowmap();
+	Map maps2 = *maps; 
+	maps2.drowmap();
 	
 	gotoxy(goal->getX(), goal->getY());
 	cout << goal->getShape();
@@ -79,6 +78,16 @@ void MyEngine::Rander()
 	if (player->getX() == goal->getX() && player->getY() == goal->getY())
 	{
 		cout << "µµÂø" << endl;
+	}
+}
+
+void MyEngine::Run()
+{
+	while (bIsRunning)
+	{
+		Input();
+		Tick();
+		Rander();
 	}
 }
 
